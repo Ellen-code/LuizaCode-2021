@@ -30,7 +30,7 @@
             </tr>
           </thead>
           <tbody>
-          {% for dbs in db %}
+          {% for dbs in db_p %}
               <tr>
                   <th>{{dbs.id}}</th>
                   <td>{{dbs.cnpj}}</td>
@@ -64,7 +64,7 @@
             </tr>
           </thead>
           <tbody>
-          {% for dbs in db %}
+          {% for dbs in db_e %}
               <tr>
                   <th>{{dbs.id}}</th>
                   <td>{{dbs.cnpj}}</td>
@@ -73,9 +73,9 @@
                   <td>{{dbs.cidade}}</td>
                   <td>{{dbs.estado}}</td>
                   <td>
-                      <a href="/view/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
-                      <a href="/edit/{{dbs.id}}/" class="btn btn-primary">Editar</a>
-                      <a href="/delete/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+                      <a href="/view_empresas/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
+                      <a href="/edit_empresas/{{dbs.id}}/" class="btn btn-primary">Editar</a>
+                      <a href="/delete_empresa/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
                   </td>
               </tr>
           {% endfor %}

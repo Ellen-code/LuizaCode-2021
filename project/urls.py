@@ -15,28 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-<<<<<<< Updated upstream
-from app.views import form_empresas, home, form, create, view, edit, update, delete, form
-=======
-from app.views import form_empresas, home, form, create, view, edit, update, delete, create_empresas, view_empresas
->>>>>>> Stashed changes
+from app.views import create_empresas, delete_empresa, edit_empresas, form_empresas, home, form, create, update_empresas, view, edit, update, delete, form, view_empresas
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('forms/', form, name='forms'),
     path('create/', create, name='create'),
-    path('view/<int:pk>/', view, name='view'),
-    path('edit/<int:pk>/', edit, name='edit'),
-    path('update/<int:pk>/', update, name='update'),
-    path('delete/<int:pk>/', delete, name='delete'),
-<<<<<<< Updated upstream
-    path('forms_empresa/', form_empresas, name='form_empresas'),
-=======
-    path('forms_empresa/', form_empresas, name='forms_empresas'),
     path('create_empresas/', create_empresas, name='create_empresas'),
+    path('view/<int:pk>/', view, name='view'),
     path('view_empresas/<int:pk>/', view_empresas, name='view_empresas'),
->>>>>>> Stashed changes
+    path('edit/<int:pk>/', edit, name='edit'),
+    path('edit_empresas/<int:pk>/', edit_empresas, name='edit_empresas'),
+    path('update/<int:pk>/', update, name='update'),
+    path('update_empresas/<int:pk>/', update_empresas, name='update_empresas'),
+    path('delete/<int:pk>/', delete, name='delete'),
+    path('delete_empresa/<int:pk>/', delete_empresa, name='delete_empresa'),
+    path('forms_empresa/', form_empresas, name='form_empresas'),
 
 
 ]

@@ -14,7 +14,7 @@
     <div class="col-8 m-auto pt-4 pb-2 text-center">
         <div id="result"></div>
 
-        <form name="forms_empresa" id="forms_empresa" action="{% if db%}/update/{{db.id}}/{%else%}/create/{% endif %}" method="post">
+        <form name="forms_empresa" id="forms_empresa" action="{% if db%}/update_empresas/{{db.id}}/{%else%}/create_empresas/{% endif %}" method="post">
             {% csrf_token %}
         <!--{{forms.as_p}}-->
             <div class ="form-group mt-4">CNPJ: {{form_empresas.cnpj}}</div>

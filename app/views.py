@@ -6,7 +6,8 @@ from app.models import Empresas, Produtos
 
 def home(request):
     data = {}
-    data['db'] = Produtos.objects.all()
+    data['db_p'] = Produtos.objects.all()
+    data['db_e'] = Empresas.objects.all()
     return render(request, 'index.html', data)
 
 def form(request):
@@ -39,13 +40,19 @@ def view(request, pk):
 def view_empresas(request, pk):
     data = {}
     data['db'] = Empresas.objects.get(pk=pk)
-    return render(request, 'view.html', data)
+    return render(request, 'view_empresas.html', data)
 
 def edit(request, pk):
     data = {}
     data['db'] = Produtos.objects.get(pk=pk)
     data['forms'] = ProdutosForm(instance=data['db'])
     return render(request, 'forms.html', data)
+
+def edit_empresas(request, pk):
+    data = {}
+    data['db'] = Empresas.objects.get(pk=pk)
+    data['forms'] = EmpresasForm(instance=data['db'])
+    return render(request, 'forms_empresa_mi.html', data)
 
 def update(request, pk):
     data = {}
@@ -54,8 +61,21 @@ def update(request, pk):
     if form.is_valid():
         form.save()
         return redirect('home')
+    
+def update_empresas(request, pk):
+    data = {}
+    data['db'] = Empresas.objects.get( pk=pk )
+    form = EmpresasForm(request.POST or None, instance=data['db'])
+    if form.is_valid():
+        form.save()
+        return redirect('home')
 
 def delete(request, pk):
     db = Produtos.objects.get(pk=pk)
+    db.delete()
+    return  redirect('home')
+
+def delete_empresa(request, pk):
+    db = Empresas.objects.get(pk=pk)
     db.delete()
     return  redirect('home')
