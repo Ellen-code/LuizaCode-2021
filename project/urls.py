@@ -16,18 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app.views import cadastro_empresas, home, cadastro_produtos, create, view, edit, update, delete
+from app.views import cadastro_empresas, home, cadastro_produtos, view, edit, update, delete, view_empresas
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('cadastro_produtos/', cadastro_produtos, name='cadastro_produtos'),
-    path('create/', create, name='create'),
+   # path('create/', create, name='create'),
     path('view/<int:pk>/', view, name='view'),
     path('edit/<int:pk>/', edit, name='edit'),
     path('update/<int:pk>/', update, name='update'),
     path('delete/<int:pk>/', delete, name='delete'),
     path('cadastro_empresas/', cadastro_empresas, name='cadastro_empresas'),
-    path('create_empresas/', create_empresas, name='create_empresas'),
-    path('view_empresas/<int:pk>/', view_empresas, name='view_empresas'),
+   # path('create_empresas/', create_empresas, name='create_empresas'),
+    path('view_empresas/<int:pk>/', view_empresas, name='view_empresas')
 ]

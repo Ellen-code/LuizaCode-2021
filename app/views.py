@@ -26,9 +26,9 @@ def create(request):
         return redirect('home')
 
 def create_empresas(request):
-    form = EmpresasForm(request.POST or None)
-    if form.is_valid():
-        form.save()
+    form_empresas = EmpresasForm(request.POST or None)
+    if form_empresas.is_valid():
+        form_empresas.save()
         return redirect('home')
 
 def view(request, pk):
@@ -39,7 +39,7 @@ def view(request, pk):
 def view_empresas(request, pk):
     data = {}
     data['db'] = Empresas.objects.get(pk=pk)
-    return render(request, 'view.html', data)
+    return render(request, 'view_empresas.html', data)
 
 def edit(request, pk):
     data = {}
