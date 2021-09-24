@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>The Clouders</title>
@@ -11,8 +11,8 @@
     </div>
 
     <div class="col-8 m-auto pt-2 pb-2 text-left">
-        <a href="/forms_empresa" class="btn btn-success"> + Empresa </a>
-        <a href="/forms" class="btn btn-success"> + Produto </a>
+        <a href="/cadastro_empresas" class="btn btn-success"> + Empresa </a>
+        <a href="/cadastro_produtos" class="btn btn-success"> + Produto </a>
     </div>
 
 
@@ -22,7 +22,7 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">CNPJ</th>
-              <th scope="col">CódigoProduto</th>
+              <th scope="col">Código</th>
               <th scope="col">Produto</th>
               <th scope="col">Marca</th>
               <th scope="col">Quantidade</th>
@@ -74,8 +74,13 @@
                   <td>{{dbs.estado}}</td>
                   <td>
                       <a href="/view_empresas/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
+<<<<<<< HEAD
                       <a href="/edit_empresas/{{dbs.id}}/" class="btn btn-primary">Editar</a>
                       <a href="/delete_empresa/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+=======
+                      <a href="/edit/{{dbs.id}}/" class="btn btn-primary">Editar</a>
+                      <a href="/delete/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+>>>>>>> developer
                   </td>
               </tr>
           {% endfor %}

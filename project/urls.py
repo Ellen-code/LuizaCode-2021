@@ -15,14 +15,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+<<<<<<< HEAD
 from app.views import create_empresas, delete_empresa, edit_empresas, form_empresas, home, form, create, update_empresas, view, edit, update, delete, form, view_empresas
+=======
+
+from app.views import cadastro_empresas, home, cadastro_produtos, view, edit, update, delete, view_empresas
+>>>>>>> developer
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
+<<<<<<< HEAD
     path('forms/', form, name='forms'),
     path('create/', create, name='create'),
     path('create_empresas/', create_empresas, name='create_empresas'),
+=======
+    path('cadastro_produtos/', cadastro_produtos, name='cadastro_produtos'),
+   # path('create/', create, name='create'),
+>>>>>>> developer
     path('view/<int:pk>/', view, name='view'),
     path('view_empresas/<int:pk>/', view_empresas, name='view_empresas'),
     path('edit/<int:pk>/', edit, name='edit'),
@@ -30,8 +40,14 @@ urlpatterns = [
     path('update/<int:pk>/', update, name='update'),
     path('update_empresas/<int:pk>/', update_empresas, name='update_empresas'),
     path('delete/<int:pk>/', delete, name='delete'),
+<<<<<<< HEAD
     path('delete_empresa/<int:pk>/', delete_empresa, name='delete_empresa'),
     path('forms_empresa/', form_empresas, name='form_empresas'),
 
 
+=======
+    path('cadastro_empresas/', cadastro_empresas, name='cadastro_empresas'),
+   # path('create_empresas/', create_empresas, name='create_empresas'),
+    path('view_empresas/<int:pk>/', view_empresas, name='view_empresas')
+>>>>>>> developer
 ]

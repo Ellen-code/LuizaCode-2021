@@ -10,15 +10,15 @@ def home(request):
     data['db_e'] = Empresas.objects.all()
     return render(request, 'index.html', data)
 
-def form(request):
+def cadastro_produtos(request):
     data = {}
-    data['forms'] = ProdutosForm()
-    return render(request, 'forms.html', data)
+    data['cadastro_produtos'] = ProdutosForm()
+    return render(request, 'cadastro_produtos.html', data)
 
-def form_empresas(request):
+def cadastro_empresas(request):
     data = {}
-    data['form_empresas'] = EmpresasForm()
-    return render(request, 'forms_empresa.html', data)
+    data['cadastro_empresas'] = EmpresasForm()
+    return render(request, 'cadastro_empresas.html', data)
 
 def create(request):
     form = ProdutosForm(request.POST or None)
@@ -45,8 +45,8 @@ def view_empresas(request, pk):
 def edit(request, pk):
     data = {}
     data['db'] = Produtos.objects.get(pk=pk)
-    data['forms'] = ProdutosForm(instance=data['db'])
-    return render(request, 'forms.html', data)
+    data['cadastro_produtos'] = ProdutosForm(instance=data['db'])
+    return render(request, 'cadastro_produtos.html', data)
 
 def edit_empresas(request, pk):
     data = {}

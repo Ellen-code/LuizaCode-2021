@@ -8,7 +8,11 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
+<<<<<<< HEAD
 set VIRTUAL_ENV=C:\Users\Giovane\Desktop\meus\giovani\code\projetos\luiza-code\LuizaCode-2021\venv
+=======
+set VIRTUAL_ENV=C:\Users\ellen\OneDrive\Documentos\luizaCode\LuizaCode-2021\venv
+>>>>>>> developer
 
 if not defined PROMPT set PROMPT=$P$G
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!C:\Users\Giovane\Desktop\meus\giovani\code\projetos\luiza-code\LuizaCode-2021\venv\Scripts\python.exe
+=======
+#!C:\Users\ellen\OneDrive\Documentos\luizaCode\LuizaCode-2021\venv\Scripts\python.exe
+>>>>>>> developer
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
