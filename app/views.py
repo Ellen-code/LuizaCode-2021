@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from app.forms2 import ProdutosForm, EmpresasForm
-from app.models import Produtos
+from app.models import Empresas, Produtos
 
 # Create your views here.
 
@@ -34,6 +34,11 @@ def create_empresas(request):
 def view(request, pk):
     data = {}
     data['db'] = Produtos.objects.get(pk=pk)
+    return render(request, 'view.html', data)
+
+def view_empresas(request, pk):
+    data = {}
+    data['db'] = Empresas.objects.get(pk=pk)
     return render(request, 'view.html', data)
 
 def edit(request, pk):
