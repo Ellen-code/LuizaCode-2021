@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Clouders</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1> Marketplace The Clouders</h1>
+    </div>
+
+    <div class="col-8 m-auto pt-2 pb-2 text-left">
+        <a href="/forms_empresa" class="btn btn-success"> + Empresa </a>
+        <a href="/forms" class="btn btn-success"> + Produto </a>
+    </div>
+
+
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">CNPJ</th>
+              <th scope="col">CódigoProduto</th>
+              <th scope="col">Produto</th>
+              <th scope="col">Marca</th>
+              <th scope="col">Quantidade</th>
+                <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for dbs in db %}
+              <tr>
+                  <th>{{dbs.id}}</th>
+                  <td>{{dbs.cnpj}}</td>
+                  <td>{{dbs.codigo}}</td>
+                  <td>{{dbs.produto}}</td>
+                  <td>{{dbs.marca}}</td>
+                  <td>{{dbs.quantidade}}</td>
+                  <th>{{dbs.id_empresa}}</th>
+                  <td>
+                      <a href="/view_produtos/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
+                      <a href="/edit_produtos/{{dbs.id}}/" class="btn btn-primary">Editar</a>
+                      <a href="/delete_produtos/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+                  </td>
+              </tr>
+          {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+    {% load static %}
+    <script src="{% static 'javascript.js' %}"></script>
+
+</body>
+</html>

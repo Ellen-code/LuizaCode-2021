@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1> Cadastro de produtos</h1>
+    </div>
+
+
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <div id="result"></div>
+
+        <form name="forms_produtos" id="forms_produtos" action="{% if db%}/update_produtos/{{db.id}}/{%else%}/create_produtos/{% endif %}" method="post">
+            {% csrf_token %}
+        <!--{{forms.as_p}}-->
+            <div class ="form-group mt-4">CNPJ: {{forms.cnpj}}</div>
+            <div class ="form-group mt-4">Código: {{forms.codigo}}</div>
+            <div class ="form-group mt-4">Produto: {{forms.produto}}</div>
+            <div class ="form-group mt-4">Marca: {{forms.marca}}</div>
+            <div class ="form-group mt-4">Quantidade: {{forms.quantidade}}</div><br>
+            <input type="submit" class="btn btn-success" value="Salvar">
+            <div class="col-8 m-auto pt-3 pb-2 text-center">
+            <a href="/home_produtos" class="btn btn-outline-info">Voltar</a>
+            </div>
+        </form>
+    </div>
+
+    {% load static %}
+    <script src="{% static 'javascript.js' %}"></script>
+
+</body>
+</html>
