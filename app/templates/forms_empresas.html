@@ -1,5 +1,7 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Formulário</title>
@@ -17,14 +19,15 @@
         <form name="forms_empresas" id="forms_empresas" action="{% if db%}/update_empresas/{{db.id}}/{%else%}/create_empresas/{% endif %}" method="post">
             {% csrf_token %}
         <!--{{forms.as_p}}-->
-            <div class ="form-group mt-4">CNPJ: {{form_empresas.cnpj}}</div>
-            <div class ="form-group mt-4">Razão Social: {{form_empresas.razaoSocial}}</div>
-            <div class ="form-group mt-4">Email: {{form_empresas.email}}</div>
-            <div class ="form-group mt-4">Cidade: {{form_empresas.cidade}}</div>
-            <div class ="form-group mt-4">Estado: {{form_empresas.estado}}</div><br>
+            <div class ="form-group mt-4">Url (imagem): {{forms_empresas.url}}</div>
+            <div class ="form-group mt-4">CNPJ: {{forms_empresas.cnpj}}</div>
+            <div class ="form-group mt-4">Razão Social: {{forms_empresas.razaoSocial}}</div>
+            <div class ="form-group mt-4">Email: {{forms_empresas.email}}</div>
+            <div class ="form-group mt-4">Cidade: {{forms_empresas.cidade}}</div>
+            <div class ="form-group mt-4">Estado: {{forms_empresas.estado}}</div><br>
             <input type="submit" class="btn btn-success" value="Salvar">
             <div class="col-8 m-auto pt-3 pb-2 text-center">
-            <a href="/" class="btn btn-outline-info">Voltar</a>
+            <a href="/home" class="btn btn-outline-info">Voltar</a>
             </div>
         </form>
     </div>

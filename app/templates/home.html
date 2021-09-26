@@ -1,5 +1,4 @@
-{% load static %}
-
+{% load static %} 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,42 +16,41 @@
           <input type="text" id="search" name="search" class="form-control" placeholder="Buscar...">
         </form>
         <button type="button" class="btn btn-secondary">Buscar</button>
-    </div>
+      </div>
 
     <div class="col-8 m-auto pt-2 pb-2 text-left">
+        <a href="/forms_empresas" class="btn btn-success"> Cadastrar Empresa </a>
         <a href="/forms_produtos" class="btn btn-success"> Cadastrar Produto </a>
-        <a href="/home" class="btn btn-success"> Ver empresas </a>
     </div>
-
-
     <div class="col-8 m-auto pt-4 pb-2 text-center">
         <table class="table">
           <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Imagem</th>
-              <th scope="col">CódigoProduto</th>
-              <th scope="col">Produto</th>
-              <th scope="col">Marca</th>
-              <th scope="col">Quantidade</th>
-              <th scope="col">Empresa</th>
+              <th scope="col">URL</th>
+              <th scope="col">CNPJ</th>
+              <th scope="col">Razão Social</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">Cidade</th>
+              <th scope="col">Estado</th>
                 <th scope="col">Ações</th>
             </tr>
           </thead>
           <tbody>
           {% for dbs in db %}
               <tr>
-                <th>{{dbs.id}}</th>
-                <th>{{dbs.url}}</th>
-                <td>{{dbs.codigo}}</td>
-                <td>{{dbs.produto}}</td>
-                <td>{{dbs.marca}}</td>
-                <td>{{dbs.quantidade}}</td>
-                <td>{{dbs.quantidade}}</td>
-                <td>
-                      <a href="/view_produtos/{{dbs.id}}" class="btn btn-dark">Visualizar</a>
-                      <a href="/edit_produtos/{{dbs.id}}" class="btn btn-primary">Editar</a>
-                      <a href="/delete_produtos/{{dbs.id}}" class="btn btn-danger btnDel">Deletar</a>
+                  <th>{{dbs.id}}</th>
+                  <td>{{dbs.url}}</td>
+                  <td>{{dbs.cnpj}}</td>
+                  <td>{{dbs.razaoSocial}}</td>
+                  <td>{{dbs.email}}</td>
+                  <td>{{dbs.cidade}}</td>
+                  <td>{{dbs.estado}}</td>
+                  <td>
+                      <a href="/view_empresas/{{dbs.id}}" class="btn btn-dark">Visualizar</a>
+                      <a href="/edit_empresas/{{dbs.id}}" class="btn btn-primary">Editar</a>
+                      <a href="/delete_empresas/{{dbs.id}}" class="btn btn-danger btnDel">Deletar</a>
+                      <a href="/view_produtos/{{dbs.id}}" class="btn btn-primary">Produtos</a>
                   </td>
               </tr>
           {% endfor %}

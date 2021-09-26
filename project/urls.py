@@ -16,11 +16,12 @@ Including another URLconf
 from django import forms
 from django.contrib import admin
 from django.urls import path
-from app.views import create_empresas, create_produtos, forms_empresas, forms_produtos, home, home_produtos, view_empresas, view_produtos, edit_empresas, edit_produtos, update_empresas, update_produtos, delete_empresas, delete_produtos
+from app.views import create_empresas, create_produtos, forms_empresas, forms_produtos, home, home_produtos, view_empresas, view_produtos, edit_empresas, edit_produtos, update_empresas, update_produtos, delete_empresas, delete_produtos, index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home'),
+    path(' ', index),
+    path('home/', home, name='home'),
     path('home_produtos/', home_produtos, name='home_produtos'),
     path('forms_empresas/', forms_empresas, name='forms_empresas'),
     path('forms_produtos/', forms_produtos, name='forms_produtos'),

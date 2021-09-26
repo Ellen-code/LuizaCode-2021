@@ -1,5 +1,7 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br ">
 <head>
     <meta charset="UTF-8">
     <title>Formulário</title>
@@ -13,20 +15,20 @@
 
     <div class="col-8 m-auto pt-4 pb-2 text-center">
         <div id="result"></div>
-
-        <form name="forms_produtos" id="forms_produtos" action="{% if db%}/update_produtos/{{db.id}}/{%else%}/create_produtos/{% endif %}" method="post">
-            {% csrf_token %}
-        <!--{{forms.as_p}}-->
-            <div class ="form-group mt-4">CNPJ: {{forms.cnpj}}</div>
-            <div class ="form-group mt-4">Código: {{forms.codigo}}</div>
-            <div class ="form-group mt-4">Produto: {{forms.produto}}</div>
-            <div class ="form-group mt-4">Marca: {{forms.marca}}</div>
-            <div class ="form-group mt-4">Quantidade: {{forms.quantidade}}</div><br>
-            <input type="submit" class="btn btn-success" value="Salvar">
-            <div class="col-8 m-auto pt-3 pb-2 text-center">
-            <a href="/home_produtos" class="btn btn-outline-info">Voltar</a>
-            </div>
-        </form>
+            <form name="forms_produtos" id="forms_produtos" action="{% if db %}/update_produtos/{{db.id}}/{% else %}/create_produtos/{% endif %}" method="post">
+            
+                {% csrf_token %}
+                <!--{{forms.as_p}}-->
+                <div class ="form-group mt-4">Url (imagem): {{forms_produtos.url}} </div>
+                <div class ="form-group mt-4">Código: {{forms_produtos.codigo}}</div>
+                <div class ="form-group mt-4">Produto: {{forms_produtos.produto}}</div>
+                <div class ="form-group mt-4">Marca: {{forms_produtos.marca}}</div>
+                <div class ="form-group mt-4">Quantidade: {{forms_produtos.quantidade}}</div>
+                <div class ="form-group mt-4">Empresa: {{forms_produtos.empresa}}</div><br>
+                <input type="submit" class="btn btn-success" value="Salvar">
+                <div class="col-8 m-auto pt-3 pb-2 text-center">
+                <a href="/home_produtos" class="btn btn-outline-info">Voltar</a>
+            </form>            
     </div>
 
     {% load static %}

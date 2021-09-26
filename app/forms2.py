@@ -6,11 +6,11 @@ from app.models import Empresas, Produtos
 class EmpresasForm(ModelForm):
     class Meta:
         model = Empresas
-        fields = ['cnpj', 'razaoSocial', 'email', 'cidade', 'estado']
+        fields = ['url', 'cnpj', 'razaoSocial', 'email', 'cidade', 'estado']
 
         
 class ProdutosForm(ModelForm):
     class Meta:
         model = Produtos
-        fields = ['cnpj', 'codigo', 'produto', 'marca', 'quantidade', 'empresa']
+        fields = ['url', 'codigo', 'produto', 'marca', 'quantidade', 'empresa']
 

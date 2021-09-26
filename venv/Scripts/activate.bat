@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Usuario\OneDrive\Área de Trabalho\Estudos\3. Luiza Labs\LuizaCode-2021\venv
+set VIRTUAL_ENV=C:\Users\ellen\OneDrive\Documentos\luizaCode2\LuizaCode-2021\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
