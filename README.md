@@ -84,7 +84,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/katifb">
         <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Katiane Brustolon no GitHub"/><br>
         <sub>
           <b>Katifb</b>
@@ -92,7 +92,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/Ellen-code">
         <img src="https://avatars.githubusercontent.com/u/71970858?v=4" width="100px;" alt="Foto da Ellen"/><br>
         <sub>
           <b>Ellen-Code</b>
@@ -100,7 +100,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/ZuuhYuri">
         <img src="https://avatars.githubusercontent.com/u/68450681?v=4" width="100px;" alt="Foto da Juliana"/><br>
         <sub>
           <b>ZuuhYuri</b>
@@ -108,7 +108,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
         <td align="center">
-      <a href="#">
+      <a href="https://github.com/aastronauta">
         <img src="https://avatars.githubusercontent.com/u/89890015?v=4" width="100px;" alt="Foto da Raissa"/><br>
         <sub>
           <b>Aastronauta</b>
@@ -116,7 +116,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
         <td align="center">
-      <a href="#">
+      <a href="https://github.com/mileneregina">
         <img src="https://avatars.githubusercontent.com/u/69725997?v=4" width="100px;" alt="Foto da Milene"/><br>
         <sub>
           <b>mileneregina</b>
