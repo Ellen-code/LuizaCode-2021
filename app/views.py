@@ -1,7 +1,9 @@
+from django.db.models.fields.related import ForeignKey, ForeignObject
 from django.shortcuts import render, redirect
 from app.forms2 import EmpresasForm, ProdutosForm
 from app.models import Empresas, Produtos
 from django.http import HttpResponseRedirect
+
 
 # Create your views here.
 
@@ -97,7 +99,15 @@ def delete_produtos(request, pk):
     db.delete()
     return HttpResponseRedirect('/home_produtos')
 
+
 def produtos(request, pk):
-   data = {'db': Produtos.objects.get(pk=pk)}
+   data = {'db':Produtos.objects.get(pk=pk)}
    return render(request, 'produtos.html', data)
 
+"""
+def produtos(request, empresa_id):
+    p_lista = Produtos.objects.all().filter(pk=empresa_id)
+    razaoSocial = Empresas.objects.get(empresa=empresa_id)
+    context = {'produto_lista': p_lista, 'empresa_id': empresa_id, "razaoSocial": razaoSocial}
+    return render(request, 'produtos.html', context)
+"""
