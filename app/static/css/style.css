@@ -1,0 +1,84 @@
+/* configurações gerais*/
+body{
+    background-image: linear-gradient(to right, #7b2cbf, #147df5);
+}
+
+h1{
+    color: #FFF;
+    margin-top: 5px;
+}
+
+.tipografia {
+    font-family: 'Roboto', sans-serif;
+}
+
+#bg-roxo {
+    background-color: #7209b7;
+    border-color: #7209b7;
+}
+
+#bg-view {
+    background-color: #b185db;
+    border-color: #b185db;
+}
+
+#bg-edit {
+    background-color: #1e96fc;
+    border-color: #1e96fc ;
+}
+
+#bg-produtos {
+    background-color: #3a0ca3;
+    border-color: #3a0ca3; 
+}
+
+#bg-delete{
+    background-color: #780116;
+    border-color: #780116;
+}
+.bg-azul {
+    background: #3a0ca3;
+}
+
+/* icone de pesquisa */
+.fa-search{
+    list-style: none;
+    padding: 0;
+}
+
+.icoSearch{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* footer */
+
+ul.social-network{
+    list-style: none;
+    padding: 0;
+
+}
+
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.fa{
+    font-size: 35pt;
+    color: white;
+    padding: 10px;
+}
+
+.fa-facebook-square:hover{
+    color: #3b5998
+}
+
+
+
+
+
+
+

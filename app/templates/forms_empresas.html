@@ -4,10 +4,61 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Formulário</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>The Dockers</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="container-fluid bg-fundo">
+        <div class="row">
+          
+    <!--Menu-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-azul">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto d-flex align-items-center">
+          <li class="nav-item pl-3">
+            <img src="{% static 'img/whale.png' %}" alt="Logo Dockers" width="80px" height="80px"
+              class="img-fluid rounded-circle">
+          </li>
+          <li class="nav-item pl-3">
+            <p class="m-0 font-weight-bold text-white fs-16 tipografia">The Dockers</p>
+          </li>
+        </ul>
+      </div>
+  
+          <div class="col-md-6 d-flex icoSearch ml-auto justify-content-end">
+            <div class="row">
+              <li class="nav-item pl-3 ">
+                <p class="text-white fs-16">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </p>
+              </li>
+            </div>
+          </div>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item align-items-center">
+              <form class="form-inline my-2 my-lg-0" action="" method="get">
+                <input type="text" id="search" name="search" class="form-control mr-sm-2" placeholder="Pesquisar">
+              </form>
+            </li>
+          </ul>
+    </nav>
+    <!--Menu-->
+          
+  
+  <!--Conteúdo -->
     <div class="col-8 m-auto pt-2 pb-2 text-center">
         <h1> Cadastro de empresas</h1>
     </div>
@@ -19,21 +70,63 @@
         <form name="forms_empresas" id="forms_empresas" action="{% if db%}/update_empresas/{{db.id}}/{%else%}/create_empresas/{% endif %}" method="post">
             {% csrf_token %}
         <!--{{forms.as_p}}-->
-            <div class ="form-group mt-4">Url (imagem): {{forms_empresas.url}}</div>
-            <div class ="form-group mt-4">CNPJ: {{forms_empresas.cnpj}}</div>
-            <div class ="form-group mt-4">Razão Social: {{forms_empresas.razaoSocial}}</div>
-            <div class ="form-group mt-4">Email: {{forms_empresas.email}}</div>
-            <div class ="form-group mt-4">Cidade: {{forms_empresas.cidade}}</div>
-            <div class ="form-group mt-4">Estado: {{forms_empresas.estado}}</div><br>
-            <input type="submit" class="btn btn-success" value="Salvar">
-            <div class="col-8 m-auto pt-3 pb-2 text-center">
-            <a href="/home" class="btn btn-outline-info">Voltar</a>
-            </div>
+            <div class ="form-group mt-4 text-light">CNPJ: {{forms_empresas.cnpj}}</div>
+            <div class ="form-group mt-4 text-light">Razão Social: {{forms_empresas.razaoSocial}}</div>
+            <div class ="form-group mt-4 text-light">Email: {{forms_empresas.email}}</div>
+            <div class ="form-group mt-4 text-light">Cidade: {{forms_empresas.cidade}}</div>
+            <div class ="form-group mt-4 text-light">Estado: {{forms_empresas.estado}}</div><br>
+            <input type="submit" id="bg-roxo" class="btn btn-success" value="Salvar">
+            <a href="/home" id="bg-produtos" class="btn btn-outline-info text-light">Voltar</a>
         </form>
+    </div>
+    </div>
     </div>
 
     {% load static %}
-    <script src="{% static 'javascript.js' %}"></script>
-
+    <script src="{% static 'js/javascript.js' %}"></script>
 </body>
+
+<!--Rodapé-->
+
+<footer class="page-footer font-small bg-roxoo pt=4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+          <h4 class="text-white">Siga-nos nas redes sociais:</h4>
+  
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+  
+          <ul class="social-network">
+  
+            <li>
+              <a href=""  class="icoFacebook">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+              </a>
+            </li>
+  
+            <li>
+              <a href=""  class="icoInstagram">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+  
+            <li>
+              <a href=""  class="icoLinkedin">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <div class="footer-copyright bg-roxo py-3 col-md-12 d-flex justify-content-center">
+    <span class="text-light text-center bg-roxo">© 2021 Copyright</span>
+  </div>
+  </footer>
+  
+  <!--Rodapé-->
 </html>

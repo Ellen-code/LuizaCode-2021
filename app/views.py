@@ -6,7 +6,8 @@ from django.http import HttpResponseRedirect
 # Create your views here.
 
 def index(request):
-  return render(request, 'index.html')
+  data ={}
+  return render(request, 'index.html', data)
 
 # empresas
 
@@ -95,4 +96,8 @@ def delete_produtos(request, pk):
     db = Produtos.objects.get(pk=pk)
     db.delete()
     return HttpResponseRedirect('/home_produtos')
+
+def produtos(request, pk):
+   data = {'db': Produtos.objects.get(pk=pk)}
+   return render(request, 'produtos.html', data)
 
