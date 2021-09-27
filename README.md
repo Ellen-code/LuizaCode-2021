@@ -16,51 +16,63 @@ Projeto de conclusão do programa de aceleração do Luizalabs com a Gama Academ
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [x] Tarefa 1 - Atualização do Readme
-- [ ] Tarefa 2 - Criação da Branch Developer e Staging
-- [ ] Tarefa 3 - Primeiro deploy com CRUD em Phyton
-- [ ] Tarefa 4 - API e endpoints
+- [x] Tarefa 1 - Criação e Atualização do Readme
+- [x] Tarefa 2 - Criação da Branch Developer e Staging
+- [x] Tarefa 3 - Primeiro deploy com CRUD em Phyton
+- [ ] Tarefa 4 - Front End
 - [ ] Tarefa 5 - Requisitos não obrigatórios
 
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 <!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
-* Você instalou a versão mais recente do Phyton
 * Você leu o PDF de instruções do projeto disponibilizado no Slack
+* Você instalou a versão mais recente do Phyton, Django e Sqlite
+* Você clonou o repositório Developer
 
-## 🚀 Instalando <Luiza Code - The Dockers' Project>
+## 🚀 Instalando Luiza Code - The Dockers' Project
 
 Para instalar o Luiza Code - The Dockers Project, siga estas etapas:
 
 Linux e macOS:
 ```
-<comando_de_instalação>
+% git clone https://github.com/Ellen-code/LuizaCode-2021.git
 ```
 
 Windows:
 ```
-<comando_de_instalação>
+% git clone https://github.com/Ellen-code/LuizaCode-2021.git
 ```
 
 ## ☕ Usando Luiza Code - The Dockers' Project 
 
 Para usar Luiza Code - The Dockers' Project, siga estas etapas:
+ 
+ O projeto está estruturado em 03 branches: <br />
+  
+   01 - Main (Produção) <br />
+   02 - Staging (Testes) <br />
+   03 - Developer (Desenvolvimento) <br />
 
+* Commit:
 ```
-<exemplo_de_uso>
+git commit -m "first commit"
+```
+* Push na Developer:
+```
+git push orign developer
 ```
 
-Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
+<!---Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!---> 
 
-## 📫 Contribuindo para <nome_do_projeto>
+## 📫 Contribuindo para The Dockers Project
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
-Para contribuir com <nome_do_projeto>, siga estas etapas:
+Para contribuir com The Dockers Project, siga estas etapas:
 
 1. Bifurque este repositório.
 2. Crie um branch: `git checkout -b <nome_branch>`.
 3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
-4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
+4. Envie para o branch original: `git push origin developer`
 5. Crie a solicitação de pull.
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
@@ -72,26 +84,42 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/katifb">
         <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Katiane Brustolon no GitHub"/><br>
         <sub>
-          <b>Katiane</b>
+          <b>Katifb</b>
         </sub>
       </a>
     </td>
     <td align="center">
-      <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/71970858?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+      <a href="https://github.com/Ellen-code">
+        <img src="https://avatars.githubusercontent.com/u/71970858?v=4" width="100px;" alt="Foto da Ellen"/><br>
         <sub>
-          <b>Ellen</b>
+          <b>Ellen-Code</b>
         </sub>
       </a>
     </td>
     <td align="center">
-      <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/68450681?v=4" width="100px;" alt="Foto do Steve Jobs"/><br>
+      <a href="https://github.com/ZuuhYuri">
+        <img src="https://avatars.githubusercontent.com/u/68450681?v=4" width="100px;" alt="Foto da Juliana"/><br>
         <sub>
           <b>ZuuhYuri</b>
+        </sub>
+      </a>
+    </td>
+        <td align="center">
+      <a href="https://github.com/aastronauta">
+        <img src="https://avatars.githubusercontent.com/u/89890015?v=4" width="100px;" alt="Foto da Raissa"/><br>
+        <sub>
+          <b>Aastronauta</b>
+        </sub>
+      </a>
+    </td>
+        <td align="center">
+      <a href="https://github.com/mileneregina">
+        <img src="https://avatars.githubusercontent.com/u/69725997?v=4" width="100px;" alt="Foto da Milene"/><br>
+        <sub>
+          <b>mileneregina</b>
         </sub>
       </a>
     </td>
